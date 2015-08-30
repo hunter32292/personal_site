@@ -1,0 +1,81 @@
+<div id="information">
+	<div class="row">
+	  <div class="small-4 large-4 columns profilePic">
+			<div id="wrap">
+				<%= image_tag "profile.jpg" , class:"avatar" %>
+			</div>
+		</div>
+	  <div class="small-8 large-8 columns">
+			<div class="vcard intro">
+				<%= Information.find(1).content %>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+  <div class="large-12 columns"><hr></div>
+</div>
+
+<div id="blog-posts">
+<% if @blog.empty? %>
+	<div class="row">
+	  <div class="small-2 large-4 columns"></div>
+	  <div class="small-4 large-4 columns">
+			<i class="fa fa-quote-left"></i> No Blog Posts Found
+		</div>
+	  <div class="small-6 large-4 columns"></div>		
+	</div>
+<% else %> 
+	<div class="content">
+		<div class="row">
+		  <div class="large-12 columns"></div>
+		</div>
+		<div class="row">
+
+		</div>
+	</div>
+<% end %>
+</div>
+<div class="row">
+  <div class="large-12 columns"><hr></div>
+</div>
+<div id="contact-form">
+<%= form_for @contact do |f| %>
+	<% if @contact.errors.any? %>
+		<div class="error_messages">
+			<ul>
+				<% for message in @contact.errors.full_messages %>
+					<li class="alert alert-danger"><%= message %></li>
+				<% end %>
+				</ul>
+		</div>
+	<% end %>
+	<div class="row">
+	  <div class="small-0 large-2 columns"></div>
+	  <div class="small-10 large-8 columns">
+		  <fieldset>
+		  	<legend>Contact Me</legend>
+				<%= label_tag :name, "Name: "%> 		
+				<%= f.text_field :name %> 		
+				<%= label_tag :email, "Email: "%> 		
+				<%= f.text_field :email %> 		
+				<%= label_tag :message, "message: "%> 		
+				<%= f.text_area :message %> 		
+			</fieldset>
+				<%= f.submit 'Submit', class:"button round" %>
+		</div>
+	  <div class="small-2 large-2 columns"></div>
+	</div>
+<% end %> 
+</div>
+<div class="row">
+  <div class="large-12 columns"><hr></div>
+</div>
+<center>
+<footer>
+	<u>Built By</u>:
+	<br>
+  <p>&copy; JE Software Solutions 2015</p>
+</footer>
+</center>
+<br>

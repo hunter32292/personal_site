@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<%= favicon_link_tag "chef.ico" %>
+
+    <title>Cuisine De Peter</title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+	<div class="sticky">
+  <nav class="top-bar" data-topbar role="navigation">
+  <!-- Title -->
+  <ul class="title-area">
+    <li class="name">
+		<h2><a href="#"><b>Cuisine De Peter</b>&nbsp;<i class="fa fa-camera-retro"></i></a></h2>
+	</li>
+
+    <!-- Mobile Menu Toggle -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <!-- Top Bar Section -->
+  <section class="top-bar-section">
+
+	    <!-- Top Bar Right Nav Elements -->
+    <ul class="right">
+      <!-- Search | has-form wrapper -->
+      <li class="has-form">
+        <div class="row collapse">
+          <div class="large-8 small-9 columns">
+            <input type="text" placeholder="Search">
+          </div>
+          <div class="large-4 small-3 columns">
+            <a href="#" class="success button expand">Search</a>
+          </div>
+        </div>
+      </li>
+      <!-- Divider -->
+      <li class="divider"></li>
+      <li><a href="#information">Meet Me</a></li>
+      <li class="divider"></li>
+      <li><a href="#blog-posts">Blog</a></li>
+      <li class="divider"></li>
+      <li><a href="#contact-form">Contact Me</a></li>
+      <li class="divider"></li>
+     </li>
+  	</ul>
+		</section>
+	</nav>
+	</div>
+
+	    <%= yield %>
+
+  </body>
+</html>

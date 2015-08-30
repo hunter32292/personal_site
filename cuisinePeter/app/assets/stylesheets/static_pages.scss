@@ -1,0 +1,19 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Rounded avatar */
+#wrap{
+  text-align: center;
+}
+.avatar {
+	border-radius: 50% 50% 50% 50%;
+}
+
+.intro {
+	margin-top: 30%;
+}
+
+.profilePic {
+	margin-top: 5%;
+}
